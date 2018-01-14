@@ -25,15 +25,15 @@ def get_args():
   parser = optparse.OptionParser()
   parser.add_option("-t", "--time", dest="time", default=int(time.time()),
                    type="int", help="the (unix) time when the genesisblock is created")
-  parser.add_option("-z", "--timestamp", dest="timestamp", default="14/Apr/2014 No chowder for you, cause clams have feelings too",
+  parser.add_option("-z", "--timestamp", dest="timestamp", default="VIZEH NEXT MONEY REVOLUTION",
                    type="string", help="the pszTimestamp found in the coinbase of the genesisblock")
-  parser.add_option("-n", "--nonce", dest="nonce", default=20542300,
+  parser.add_option("-n", "--nonce", dest="nonce", default=0,
                    type="int", help="the first value of the nonce that will be incremented when searching the genesis hash")
-  parser.add_option("-a", "--algorithm", dest="algorithm", default="scrypt",
+  parser.add_option("-a", "--algorithm", dest="algorithm", default="quark-hash",
                     help="the PoW algorithm: [SHA256|quark-hash|argon2-hash|scrypt|X11|X13|X15]xevan_hash")
-  parser.add_option("-p", "--pubkey", dest="pubkey", default="0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284",
+  parser.add_option("-p", "--pubkey", dest="pubkey", default="0451dd8c95558c0f5835b8e317985b306ef20a734ac7c505e6eb6778319be92c462abd2d6296ba075a6441ecd09ac27f50701b5ba8f3fd7b2e4fe6cf1d257bd80a",
                    type="string", help="the pubkey found in the output script")
-  parser.add_option("-v", "--value", dest="value", default=(0 * 100000000),
+  parser.add_option("-v", "--value", dest="value", default=(1),
                    type="int", help="the value in coins for the output, full value (exp. in bitcoin 5000000000 - To get other coins value: Block Value * 100000000)")
   parser.add_option("-b", "--bits", dest="bits",
                    type="int", help="the target in compact representation, associated to a difficulty of 1")
